@@ -1,0 +1,29 @@
+!!! 5
+
+html(lang='zh-TW')
+  head
+    title Find JAV
+
+    // css
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(type='text/css', href='http://fonts.googleapis.com/css?family=Ubuntu:400,700', rel='stylesheet') 
+    link(rel='stylesheet', href='/css/index.css')
+
+    // js
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
+    script(src='/js/bootstrap.min.js')
+    script(src='/js/index.js')
+
+  body
+    .container
+      .row
+        .span8.offset2
+          input.span3(type='text', placeholder='品番(ex:EKDV242)')
+          i
+        .span8.offset2
+          .alert.alert-success
+            h4.alert-heading Your torrent
+            .alert-body
+        .span8.offset2      
+          img.preview
+

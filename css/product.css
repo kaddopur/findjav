@@ -1,0 +1,109 @@
+#asteroid_banner {
+  background-image: url("/img/asteroid/cover.png");
+}
+#asteroid_feature {
+  background-image: url("/img/asteroid/feature/all.png");
+  height: 1100px;
+}
+#asteroid_feature > div:nth-child(1) {
+  position: relative;
+  top: 120px;
+  left: 320px;
+}
+#asteroid_feature > div:nth-child(2) {
+  position: relative;
+  top: 350px;
+  left: 100px;
+}
+#asteroid_feature > div:nth-child(3) {
+  position: relative;
+  top: 600px;
+  left: 200px;
+}
+#roc_banner {
+  background-image: url("/img/roc/cover.png");
+}
+#roc_feature {
+  background-image: url("/img/roc/feature/all.png");
+  height: 1200px;
+}
+#roc_feature > div {
+  position: relative;
+}
+#roc_feature > div:nth-child(1) {
+  top: 120px;
+  left: 150px;
+}
+#roc_feature > div:nth-child(2) {
+  top: 450px;
+  left: 80px;
+}
+#roc_feature > div:nth-child(3) {
+  top: 750px;
+  left: 260px;
+}
+#psg_banner {
+  background-image: url("/img/psg/cover.png");
+}
+#psg_feature {
+  background-image: url("/img/psg/feature/all.png");
+}
+#psg_feature > div {
+  position: relative;
+}
+#psg_feature > div:nth-child(1) {
+  background-image: url("/img/psg/feature/1.png");
+  width: 431px;
+  height: 474px;
+}
+#psg_feature > div:nth-child(2) {
+  background-image: url("/img/psg/feature/2.png");
+  width: 169px;
+  height: 377px;
+  float: right;
+  top: -123px;
+}
+#psg_feature > div:nth-child(3) {
+  background-image: url("/img/psg/feature/3.png");
+  width: 199px;
+  height: 531px;
+  top: 10px;
+}
+#psg_feature > div:nth-child(4) {
+  top: -930px;
+  left: 320px;
+}
+#psg_feature > div:nth-child(5) {
+  top: -580px;
+  left: 250px;
+}
+#psg_feature > div:nth-child(6) {
+  top: -350px;
+  left: 210px;
+}
+#comet_banner {
+  background-image: url("/img/comet/cover.png");
+}
+#glaze_banner {
+  background-image: url("/img/glaze/cover.png");
+}
+.tab-pane {
+  overflow: hidden;
+}
+.tab-content .span9 {
+  -webkit-border-radius: 6px;
+}
+.feature_title {
+  font-weight: 900;
+  font-size: x-large;
+  color: #333;
+}
+.feature_content {
+  font-size: medium;
+  line-height: 125%;
+  color: #777;
+  margin-top: 10px;
+}
+.hero-unit {
+  height: 180px;
+}

@@ -1,0 +1,10 @@
+#main {
+  padding: 30px 0 40px;
+}
+#main img {
+  border-radius: 5px;
+  max-width: 100%;
+}
+#main h1 {
+  margin-bottom: 20px;
+}
