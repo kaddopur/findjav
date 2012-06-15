@@ -29,7 +29,7 @@ search_vid = (target) ->
         re = new RegExp("#{target}\.torrent.*(http.*jpg)")
         image_link = re.exec(data)[1]
         $('.alert').fadeOut 'fast', ->
-          show_result('icon-ok', "#{target} is <a href='http://javjunkies.com/main/JavJ.php?k=1202&#{q}'>HERE</a>.", 'success')
+          show_result('icon-ok', "#{target} is <a href='http://javjunkies.com/main/JavJ.php?#{q}'>HERE</a>.", 'success')
           $('.preview').attr('src', image_link).show()
         return
     else

@@ -1,4 +1,4 @@
 start stylus -o ..\\css -w .
-start coffee -wc -o ..\\js .
+start coffee -wbc -o ..\\js .
 sh jake.sh
 
