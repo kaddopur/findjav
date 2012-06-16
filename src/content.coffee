@@ -1,4 +1,8 @@
-cell = document.getElementsByClassName('nw')[10]
+cells = document.getElementsByClassName('nw')
+for c in cells
+  if c.innerHTML == '品番：'
+    cell = c
+    break
 vid = cell.nextSibling.nextSibling.innerHTML
 
 chrome.extension.sendRequest {vid: vid}, (response) ->

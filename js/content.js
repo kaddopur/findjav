@@ -1,6 +1,14 @@
-var cell, vid;
+var c, cell, cells, vid, _i, _len;
 
-cell = document.getElementsByClassName('nw')[10];
+cells = document.getElementsByClassName('nw');
+
+for (_i = 0, _len = cells.length; _i < _len; _i++) {
+  c = cells[_i];
+  if (c.innerHTML === '品番：') {
+    cell = c;
+    break;
+  }
+}
 
 vid = cell.nextSibling.nextSibling.innerHTML;
 
