@@ -18,7 +18,7 @@
     {
         "matches": ["http://www.dmm.co.jp/digital/videoa/*", "http://www.dmm.co.jp/monthly/kmp/*"],
         "css": ["css/bootstrap.css", "css/content.css"],
-        "js": ["js/content.js"]
+        "js": ["js/jquery.min.js", "js/content.js"]
     }
   ]
 }
