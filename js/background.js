@@ -38,7 +38,7 @@ chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
       image_link = re.exec(data)[1];
       if (query && correct) {
         status = 'success';
-        link = "http://javjunkies.com/main/JavJ.php?" + query;
+        link = "http://javjunkies.com/main/JavJ.php?k=2215&" + query;
       }
     }
     return sendResponse({

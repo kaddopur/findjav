@@ -1,23 +1,20 @@
-var c, cell, cells, vid, _i, _len;
+var target_cell;
 
-cells = document.getElementsByClassName('nw');
-
-for (_i = 0, _len = cells.length; _i < _len; _i++) {
-  c = cells[_i];
-  if (c.innerHTML === '品番：') {
-    cell = c;
-    break;
-  }
-}
-
-vid = cell.nextSibling.nextSibling.innerHTML;
+target_cell = $('.nw:contains(品番：)').next();
 
 chrome.extension.sendRequest({
-  vid: vid
+  vid: target_cell.text()
 }, function(response) {
   if (response.link) {
-    return cell.nextSibling.nextSibling.innerHTML += "      <a href='" + response.link + "' target='_blank'>        <i class='icon icon-heart' style='background-image: url(" + (response.css_img.substr(0, response.css_img.length - 4)) + "-pink.png);'>      </a>";
+    console.log(response);
+    target_cell.html("" + (target_cell.text()) + "<i class='icon icon-heart' style='background-image: url(" + (response.css_img.substr(0, response.css_img.length - 4)) + "-pink.png);'>");
+    return $('i.icon').click(function() {
+      return $.get(response.link, function(data) {
+        console.log(data);
+        return location.replace(response.link);
+      });
+    });
   } else {
-    return cell.nextSibling.nextSibling.innerHTML += "<i class='icon icon-heart' style='background-image: url(" + response.css_img + ");'>";
+    return target_cell.html("" + (target_cell.text()) + "<i class='icon icon-heart' style='background-image: url(" + response.css_img + ");'>");
   }
 });

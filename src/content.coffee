@@ -1,17 +1,14 @@
-cells = document.getElementsByClassName('nw')
-for c in cells
-  if c.innerHTML == '品番：'
-    cell = c
-    break
-vid = cell.nextSibling.nextSibling.innerHTML
+target_cell = $('.nw:contains(品番：)').next()
 
-chrome.extension.sendRequest {vid: vid}, (response) ->
+chrome.extension.sendRequest {vid: target_cell.text()}, (response) ->
   if response.link
-    cell.nextSibling.nextSibling.innerHTML += "
-      <a href='#{response.link}' target='_blank'>
-        <i class='icon icon-heart' style='background-image: url(#{response.css_img.substr(0, response.css_img.length-4)}-pink.png);'>
-      </a>"
+    console.log response
+    target_cell.html("#{target_cell.text()}<i class='icon icon-heart' style='background-image: url(#{response.css_img.substr(0, response.css_img.length-4)}-pink.png);'>")
+    $('i.icon').click ->
+      $.get response.link, (data) ->
+        console.log data
+        location.replace(response.link)
   else
-    cell.nextSibling.nextSibling.innerHTML += "<i class='icon icon-heart' style='background-image: url(#{response.css_img});'>"
-
+    target_cell.html("#{target_cell.text()}<i class='icon icon-heart' style='background-image: url(#{response.css_img});'>")
+  
 

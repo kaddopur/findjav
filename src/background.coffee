@@ -27,7 +27,7 @@ chrome.extension.onRequest.addListener (request, sender, sendResponse) ->
       image_link = re.exec(data)[1]
       if query and correct
         status = 'success'
-        link = "http://javjunkies.com/main/JavJ.php?#{query}"
+        link = "http://javjunkies.com/main/JavJ.php?k=2215&#{query}"
     sendResponse {status: status, link: link, css_img: chrome.extension.getURL('img/glyphicons-halflings.png'), image_link: image_link}
   ).error( ->
     status = 'block'
